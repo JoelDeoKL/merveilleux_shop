@@ -21,12 +21,12 @@ class VenteController extends Controller
         $hommes = Articles::where('categories_id', '=', 1)->get();
         $femmes = Articles::where('categories_id', '=', 2)->get();
         $enfants = Articles::where('categories_id', '=', 3)->get();
-        $mixte_adulte = Articles::where('categories_id', '=', 4)->get();
-        $mixte_enfant = Articles::where('categories_id', '=', 5)->get();
+        $mixte_enfants = Articles::where('categories_id', '=', 4)->get();
+        $mixte_adultes = Articles::where('categories_id', '=', 5)->get();
         $accessoires = Articles::where('categories_id', '=', 6)->get();
         $reduction = Articles::where('reduction', '>', 0)->get();
         $categories = Categories::all();
-        return view('welcome', compact('hommes', 'femmes', 'enfants', 'accessoires', 'articles', 'mixte_adulte', 'mixte_enfant', 'arrivages', 'recents'));
+        return view('welcome', compact('hommes', 'femmes', 'enfants', 'accessoires', 'articles', 'mixte_adultes', 'mixte_enfants', 'arrivages', 'recents'));
     }
 
     /**

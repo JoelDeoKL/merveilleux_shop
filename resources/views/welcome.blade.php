@@ -95,6 +95,8 @@
 								<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#man" role="tab">Hommes</a></li>
 								<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#women" role="tab">Femmes</a></li>
 								<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#kids" role="tab">Enfants</a></li>
+								<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#MixteAdulte" role="tab">Mixte Adulte</a></li>
+								<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#MixteEnfant" role="tab">Mixte Enfant</a></li>
 								<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#accessories" role="tab">Accessories</a></li>
 							</ul>
 							<!--/ End Tab Nav -->
@@ -108,8 +110,7 @@
 											<div class="col-xl-4 col-lg-4 col-md-4 col-12">
 												<div class="single-product">
 													<div class="product-img">													 
-															<img class="hover-img" src="{{asset('images/1.png')}}" alt="#">
-														</a>
+														<img class="hover-img" src="{{asset('images/1.png')}}" alt="#">
 														<div class="button-head">
 															<div class="product-action">
 																<a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Voir</span></a>
@@ -193,6 +194,74 @@
 														<h3> {{$efant->designation}}</a></h3>
 														<div class="product-price">
 															<span>${{$efant->prix_unitaire}}</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										@endforeach
+									</div>
+								</div>
+							</div>
+							<!--/ End Single Tab -->
+							<!-- Start Single Tab -->
+							<div class="tab-pane fade" id="MixteAdulte" role="tabpanel">
+								<div class="tab-single">
+									<div class="row">
+										@foreach($mixte_adultes as $mixte_adulte)
+											<div class="col-xl-3 col-lg-4 col-md-4 col-12">
+												<div class="single-product">
+													<div class="product-img">													 
+															<img class="hover-img" src="{{asset('images/1.png')}}" alt="#">
+														</a>
+														<div class="button-head">
+															<div class="product-action">
+																<a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Voir</span></a>
+																<a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Ajouter aux Favoris</span></a>
+																<a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Ajouter au panier</span></a>
+															</div>
+															<div class="product-action-2">
+																<a title="Add to cart" href="#">Commander</a>
+															</div>
+														</div>
+													</div>
+													<div class="product-content">
+														<h3> {{$mixte_adulte->designation}}</a></h3>
+														<div class="product-price">
+															<span>${{$mixte_adulte->prix_unitaire}}</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										@endforeach
+									</div>
+								</div>
+							</div>
+							<!--/ End Single Tab -->
+							<!-- Start Single Tab -->
+							<div class="tab-pane fade" id="MixteEnfant" role="tabpanel">
+								<div class="tab-single">
+									<div class="row">
+										@foreach($mixte_enfants as $mixte_enfant)
+											<div class="col-xl-3 col-lg-4 col-md-4 col-12">
+												<div class="single-product">
+													<div class="product-img">													 
+															<img class="hover-img" src="{{asset('images/1.png')}}" alt="#">
+														</a>
+														<div class="button-head">
+															<div class="product-action">
+																<a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Voir</span></a>
+																<a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Ajouter aux Favoris</span></a>
+																<a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Ajouter au panier</span></a>
+															</div>
+															<div class="product-action-2">
+																<a title="Add to cart" href="#">Commander</a>
+															</div>
+														</div>
+													</div>
+													<div class="product-content">
+														<h3> {{$mixte_enfant->designation}}</a></h3>
+														<div class="product-price">
+															<span>${{$mixte_enfant->prix_unitaire}}</span>
 														</div>
 													</div>
 												</div>
@@ -342,8 +411,8 @@
 						<div class="heading-block">
 							<p class="small-title">Marque Merveilleux</p>
 							<h3 class="title">Des très joli polo pour Mixte pour Adulte</h3>
-							<p class="text">Des polos de la marque Merveilleux propre à la  </p>
-							<h1 class="price">$1200 <s>$1890</s></h1>
+							<p class="text">Des polos de la marque Merveilleux propre à la maison d'habillement qui sont mixtes aux hommes et aux femmes adultes. </p>
+							<h1 class="price">$12 <s>$15</s></h1>
 							<div class="comg-time">
 								<div class="clearfix" data-countdown="2021/04/02"></div>
 							</div>
@@ -362,7 +431,7 @@
 		<div class="row">
 			<div class="col-12">
 				<div class="section-title">
-					<h2>From Our Blog</h2>
+					<h2>Pour le Blog</h2>
 				</div>
 			</div>
 		</div>
@@ -372,7 +441,7 @@
 				<div class="shop-single-blog">
 					<img src="{{asset('images/6.png')}}" alt="#">
 					<div class="content">
-						<p class="date">22 July , 2020. Monday</p>
+						<p class="date">22 Janvier , 2021. Monday</p>
 						<a href="#" class="title">Sed adipiscing ornare.</a>
 						<a href="#" class="more-btn">Continue Reading</a>
 					</div>
@@ -384,7 +453,7 @@
 				<div class="shop-single-blog">
 					<img src="{{asset('images/1.png')}}" alt="#">
 					<div class="content">
-						<p class="date">22 July, 2020. Monday</p>
+						<p class="date">22 Janvier, 2021. Monday</p>
 						<a href="#" class="title">Man’s Fashion Winter Sale</a>
 						<a href="#" class="more-btn">Continue Reading</a>
 					</div>
@@ -396,7 +465,7 @@
 				<div class="shop-single-blog">
 					<img src="{{asset('images/2.png')}}" alt="#">
 					<div class="content">
-						<p class="date">22 July, 2020. Monday</p>
+						<p class="date">22 Janvier, 2021. Monday</p>
 						<a href="#" class="title">Women Fashion Festive</a>
 						<a href="#" class="more-btn">Continue Reading</a>
 					</div>
@@ -409,47 +478,47 @@
 <!-- End Shop Blog  -->
 
 <!-- Start Shop Services Area -->
-<section class="shop-services section home">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-3 col-md-6 col-12">
-				<!-- Start Single Service -->
-				<div class="single-service">
-					<i class="ti-rocket"></i>
-					<h4>Free shiping</h4>
-					<p>Orders over $100</p>
-				</div>
-				<!-- End Single Service -->
+<section class="shop-services section">
+<div class="container">
+	<div class="row">
+		<div class="col-lg-3 col-md-6 col-12">
+			<!-- Start Single Service -->
+			<div class="single-service">
+				<i class="ti-rocket"></i>
+				<h4>Achat Libre</h4>
+				<p>Acceccible de partout</p>
 			</div>
-			<div class="col-lg-3 col-md-6 col-12">
-				<!-- Start Single Service -->
-				<div class="single-service">
-					<i class="ti-reload"></i>
-					<h4>Free Return</h4>
-					<p>Within 30 days returns</p>
-				</div>
-				<!-- End Single Service -->
+			<!-- End Single Service -->
+		</div>
+		<div class="col-lg-3 col-md-6 col-12">
+			<!-- Start Single Service -->
+			<div class="single-service">
+				<i class="ti-reload"></i>
+				<h4>Retour des articles</h4>
+				<p>7 jours après la commande</p>
 			</div>
-			<div class="col-lg-3 col-md-6 col-12">
-				<!-- Start Single Service -->
-				<div class="single-service">
-					<i class="ti-lock"></i>
-					<h4>Sucure Payment</h4>
-					<p>100% secure payment</p>
-				</div>
-				<!-- End Single Service -->
+			<!-- End Single Service -->
+		</div>
+		<div class="col-lg-3 col-md-6 col-12">
+			<!-- Start Single Service -->
+			<div class="single-service">
+				<i class="ti-lock"></i>
+				<h4>Paiment sécurisé</h4>
+				<p>100% sécurisé</p>
 			</div>
-			<div class="col-lg-3 col-md-6 col-12">
-				<!-- Start Single Service -->
-				<div class="single-service">
-					<i class="ti-tag"></i>
-					<h4>Best Peice</h4>
-					<p>Guaranteed price</p>
-				</div>
-				<!-- End Single Service -->
+			<!-- End Single Service -->
+		</div>
+		<div class="col-lg-3 col-md-6 col-12">
+			<!-- Start Single Service -->
+			<div class="single-service">
+				<i class="ti-tag"></i>
+				<h4>Meilleur Prix</h4>
+				<p>Le Prix est garenti</p>
 			</div>
+			<!-- End Single Service -->
 		</div>
 	</div>
+</div>
 </section>
 <!-- End Shop Services Area -->
 
@@ -462,10 +531,10 @@
 					<!-- Start Newsletter Inner -->
 					<div class="inner">
 						<h4>Newsletter</h4>
-						<p> Subscribe to our newsletter and get <span>10%</span> off your first purchase</p>
+						<p> Abonnez-vous à notre Newsletter et gagnez <span>10%</span> de réduction su tout commande</p>
 						<form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
-							<input name="EMAIL" placeholder="Your email address" required="" type="email">
-							<button class="btn">Subscribe</button>
+							<input name="EMAIL" placeholder="Votre adresse Email" required="" type="email">
+							<button class="btn">Abonner</button>
 						</form>
 					</div>
 					<!-- End Newsletter Inner -->
