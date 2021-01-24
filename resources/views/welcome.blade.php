@@ -109,7 +109,8 @@
 										@foreach($hommes as $homme)
 											<div class="col-xl-4 col-lg-4 col-md-4 col-12">
 												<div class="single-product">
-													<div class="product-img">													 
+													<div class="product-img">
+														<img class="hover-img" src="{{asset('storage/' . $homme->image)}}" alt="#">
 														<img class="hover-img" src="{{asset('images/1.png')}}" alt="#">
 														<div class="button-head">
 															<div class="product-action">
@@ -142,7 +143,8 @@
 										@foreach($femmes as $femme)
 											<div class="col-xl-3 col-lg-4 col-md-4 col-12">
 												<div class="single-product">
-													<div class="product-img">													 
+													<div class="product-img">	
+															<img class="hover-img" src="{{asset('storage/' . $femme->image)}}" alt="#">
 															<img class="default-img" src="{{asset('images/9.png')}}" alt="#">
 														</a>
 														<div class="button-head">
@@ -176,7 +178,8 @@
 										@foreach($enfants as $enfant)
 											<div class="col-xl-3 col-lg-4 col-md-4 col-12">
 												<div class="single-product">
-													<div class="product-img">													 
+													<div class="product-img">
+															<img class="hover-img" src="{{asset('storage/' . $enfant->image)}}" alt="#">													 
 															<img class="hover-img" src="{{asset('images/1.png')}}" alt="#">
 														</a>
 														<div class="button-head">
@@ -210,7 +213,8 @@
 										@foreach($mixte_adultes as $mixte_adulte)
 											<div class="col-xl-3 col-lg-4 col-md-4 col-12">
 												<div class="single-product">
-													<div class="product-img">													 
+													<div class="product-img">
+															<img class="hover-img" src="{{asset('storage/' . $mixte_adulte->image)}}" alt="#">
 															<img class="hover-img" src="{{asset('images/1.png')}}" alt="#">
 														</a>
 														<div class="button-head">
@@ -244,7 +248,8 @@
 										@foreach($mixte_enfants as $mixte_enfant)
 											<div class="col-xl-3 col-lg-4 col-md-4 col-12">
 												<div class="single-product">
-													<div class="product-img">													 
+													<div class="product-img">
+															<img class="hover-img" src="{{asset('storage/' . $mixte_enfant->image)}}" alt="#">
 															<img class="hover-img" src="{{asset('images/1.png')}}" alt="#">
 														</a>
 														<div class="button-head">
