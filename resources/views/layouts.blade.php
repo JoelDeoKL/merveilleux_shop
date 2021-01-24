@@ -195,27 +195,58 @@
 											@endforeach
 										</ul>
 									</li>
-									<li class="main-mega"><a href="#">Meilleur recente <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+									<li class="main-mega"><a href="#">Commande recente <i class="fa fa-angle-right" aria-hidden="true"></i></a>
 										<ul class="mega-menu">
 											<li class="single-menu">
 												<a href="#" class="title-link">Commande pour Enfant</a>
 												<div class="image">
 													<img src="{{asset('images/bbn.jpg')}}" alt="#">
 												</div>
-												<div class="inner-link">
-													<a href="#">Jouer pour Enfant</a>
-													<a href="#">Chaussures Enfant</a>
-													<a href="#">Lunettes Enfant</a>
-												</div>
 											</li>
 										</ul>
 									</li>
-									<li><a href="#">Homme</a></li>
-									<li><a href="#">Femme</a></li>
-									<li><a href="#">Enfant</a></li>
-									<li><a href="#">Mixte Adulte</a></li>
-                                    <li><a href="#">Mixte Enfant</a></li>
-									<li><a href="#">Accessories</a></li>
+									<li><a href="#">Homme <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+										<ul class="sub-category">
+											@foreach($hommes as $homme);
+												<li><a href="#">{{$homme->designation}}</a></li>
+											@endforeach
+										</ul>
+									</li>
+									<li><a href="#">Femme <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+										<ul class="sub-category">
+											@foreach($femmes as $femme);
+												<li><a href="#">{{$femme->designation}}</a></li>
+											@endforeach
+										</ul>
+									</li>
+									<li><a href="#">Enfant <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+										<ul class="sub-category">
+											@foreach($enfants as $enfant);
+												<li><a href="#">{{$enfant->designation}}</a></li>
+											@endforeach
+										</ul>
+									</li>
+									<li><a href="#">Mixte Adulte <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+										<ul class="sub-category">
+											@foreach($mixte_adultes as $mixte_adulte);
+												<li><a href="#">{{$mixte_adulte->designation}}</a></li>
+											@endforeach
+										</ul>
+									</li>
+									<li><a href="#">Mixte Enfant <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+										<ul class="sub-category">
+											@foreach($mixte_enfants as $mixte_enfant);
+												<li><a href="#">{{$mixte_enfant->designation}}</a></li>
+											@endforeach
+										</ul>
+									</li>
+									<li><a href="#">Accessoires <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+										<ul class="sub-category">
+											@foreach($accessoires as $accessoire);
+												<li><a href="#">{{$accessoire->designation}}</a></li>
+											@endforeach
+										</ul>
+									</li>
 								</ul>
 							</div>
 						</div>
