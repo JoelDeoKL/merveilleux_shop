@@ -9,7 +9,7 @@
 				<div class="checkout-form">
 					<h2>Ajouter un detail</h2>
 					<!-- Form -->
-                    <form action="detail/store2" method="POST" enctype="multipart/form-data">
+                    <form action="/detail/store2" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-12">

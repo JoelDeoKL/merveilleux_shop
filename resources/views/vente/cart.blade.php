@@ -37,6 +37,9 @@
 					</tr>
 				</thead>
 				<tbody>
+					@foreach($paniers as $panier)
+						{{$paniers}}
+					@endforeach
 					<tr>
 						<td class="image" data-title="No"><img src="{{asset('images/bbn.jpg')}}" alt="#"></td>
 						<td class="product-des" data-title="Description">

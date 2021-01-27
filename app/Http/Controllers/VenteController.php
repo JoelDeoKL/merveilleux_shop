@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Articles;
 use App\Categories;
-use App\Tailles;
-use App\Couleurs;
+use App\Taille;
+use App\Couleur;
 use Illuminate\Http\Request;
 
 class VenteController extends Controller
@@ -28,8 +28,8 @@ class VenteController extends Controller
         $accessoires = Articles::where('categories_id', '=', 6)->get();
         $reduction = Articles::where('reduction', '>', 0)->get();
         $categories = Categories::all();
-        //$tailles = Tailles::all();
-        //$couleurs = Couleurs::all();
+        //$tailles = Taille::all();
+        //$couleurs = Couleur::all();
         return view('welcome', compact('hommes', 'femmes', 'enfants', 'accessoires', 'articles', 'mixte_adultes', 'mixte_enfants', 'arrivages', 'recents', 'tailles', 'couleurs'));
     }
 
@@ -57,21 +57,25 @@ class VenteController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Articles  $articles
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Articles $articles)
     {
-        //
+        $id = $articles->id;
+        $articles = Articles::where('id', '=', 1)->get();
+        $couleurs = Couleur::where('articles_id', '=', 1)->get();
+        $tailles = Taille::where('articles_id', '=', 1)->get();
+        return view('vente.ajoutPanier', compact('articles', 'couleurs', 'tailles'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Articles  $articles
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Articles $articles)
     {
         //
     }
@@ -80,10 +84,10 @@ class VenteController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Articles  $articles
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Articles $articles)
     {
         //
     }
@@ -91,10 +95,10 @@ class VenteController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Articles  $articles
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Articles $articles)
     {
         //
     }

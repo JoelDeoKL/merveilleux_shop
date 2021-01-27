@@ -114,8 +114,7 @@
 														<img class="hover-img" src="{{asset('images/1.png')}}" alt="#">
 														<div class="button-head">
 															<div class="product-action">
-																<a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Voir</span></a>
-																<a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Ajouter aux Favoris</span></a>
+																<a title="Quick View" href="achat/{{$homme->id}}"><i class=" ti-eye"></i><span>Voir</span></a>																<a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Ajouter aux Favoris</span></a>
 																<a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Ajouter au panier</span></a>
 															</div>
 															<div class="product-action-2">
@@ -149,8 +148,7 @@
 														</a>
 														<div class="button-head">
 															<div class="product-action">
-																<a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Voir</span></a>
-																<a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Ajouter aux Favoris</span></a>
+																<a title="Quick View" href="achat/{{$femme->id}}"><i class=" ti-eye"></i><span>Voir</span></a>																<a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Ajouter aux Favoris</span></a>
 																<a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Ajouter au panier</span></a>
 															</div>
 															<div class="product-action-2">
@@ -184,8 +182,7 @@
 														</a>
 														<div class="button-head">
 															<div class="product-action">
-																<a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Voir</span></a>
-																<a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Ajouter aux Favoris</span></a>
+																<a title="Quick View" href="achat/{{$enfant->id}}"><i class=" ti-eye"></i><span>Voir</span></a>																<a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Ajouter aux Favoris</span></a>
 																<a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Ajouter au panier</span></a>
 															</div>
 															<div class="product-action-2">
@@ -219,8 +216,7 @@
 														</a>
 														<div class="button-head">
 															<div class="product-action">
-																<a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Voir</span></a>
-																<a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Ajouter aux Favoris</span></a>
+																<a title="Quick View" href="achat/{{$mixte_adulte->id}}"><i class=" ti-eye"></i><span>Voir</span></a>																<a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Ajouter aux Favoris</span></a>
 																<a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Ajouter au panier</span></a>
 															</div>
 															<div class="product-action-2">
@@ -254,8 +250,7 @@
 														</a>
 														<div class="button-head">
 															<div class="product-action">
-																<a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Voir</span></a>
-																<a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Ajouter aux Favoris</span></a>
+																<a title="Quick View" href="achat/{{$mixte_enfant->id}}"><i class=" ti-eye"></i><span>Voir</span></a>																<a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Ajouter aux Favoris</span></a>
 																<a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Ajouter au panier</span></a>
 															</div>
 															<div class="product-action-2">
@@ -288,7 +283,7 @@
 														</a>
 														<div class="button-head">
 															<div class="product-action">
-																<a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Voir</span></a>
+																<a title="Quick View" href="achat/{{$accessoire->id}}"><i class=" ti-eye"></i><span>Voir</span></a>
 																<a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Ajouter aux Favoris</span></a>
 																<a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Ajouter au panier</span></a>
 															</div>
@@ -379,7 +374,7 @@
 										<a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to Compare</span></a>
 									</div>
 									<div class="product-action-2">
-										<a title="Add to cart" href="#">Add to cart</a>
+										<a title="Add to cart" href="#">Ajouter au Panier</a>
 									</div>
 								</div>
 							</div>
@@ -549,97 +544,5 @@
 	</div>
 </section>
 <!-- End Shop Newsletter -->
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="ti-close" aria-hidden="true"></span></button>
-				</div>
-				<div class="modal-body">
-					<div class="row no-gutters">
-						<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-							<!-- Product Slider -->
-								<div class="product-gallery">
-									<div class="product-img">
-										<img src="{{asset('images/2.png')}}" alt="#">
-									</div>
-								</div>
-							<!-- End Product slider -->
-						</div>
-						<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-							<div class="quickview-content">
-								<h2>{{$homme->designation}}</h2>
-								<div class="quickview-ratting-review">
-									<div class="quickview-ratting-wrap">
-										<div class="quickview-ratting">
-											<i class="yellow fa fa-star"></i>
-											<i class="yellow fa fa-star"></i>
-											<i class="yellow fa fa-star"></i>
-											<i class="yellow fa fa-star"></i>
-											<i class="fa fa-star"></i>
-										</div>
-									</div>
-									<div class="quickview-stock">
-										<span><i class="fa fa-check-circle-o"></i> {{$homme->etat ? 'in stock' : 'Indisponible'}}</span>
-									</div>
-								</div>
-								<h3>${{$homme->prix_unitaire}}</h3>
-								<div class="quickview-peragraph">
-									<p>{{$homme->description}}</p>
-								</div>
-								<div class="size">
-									<div class="row">
-										<div class="col-lg-6 col-12">
-											<h5 class="title">Taille</h5>
-											<select>
-												<option selected="selected">s</option>
-												<option>m</option>
-												<option>l</option>
-												<option>xl</option>
-											</select>
-										</div>
-										<div class="col-lg-6 col-12">
-											<h5 class="title">Color</h5>
-											<select>
-												<option selected="selected">orange</option>
-												<option>purple</option>
-												<option>black</option>
-												<option>pink</option>
-											</select>
-										</div>
-									</div>
-								</div>
-								<div class="quantity">
-									<!-- Input Order -->
-									<div class="input-group">
-										<div class="button minus">
-											<button type="button" class="btn btn-primary btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-												<i class="ti-minus"></i>
-											</button>
-										</div>
-										<input type="text" name="quant[1]" class="input-number"  data-min="1" data-max="1000" value="1">
-										<div class="button plus">
-											<button type="button" class="btn btn-primary btn-number" data-type="plus" data-field="quant[1]">
-												<i class="ti-plus"></i>
-											</button>
-										</div>
-									</div>
-									<!--/ End Input Order -->
-								</div>
-								<div class="add-to-cart">
-									<a href="{{URL('cart')}}" class="btn">Add to cart</a>
-									<a href="#" class="btn min"><i class="ti-heart"></i></a>
-									<a href="#" class="btn min"><i class="fa fa-compress"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-</div>
-<!-- Modal end -->
 
 @endsection

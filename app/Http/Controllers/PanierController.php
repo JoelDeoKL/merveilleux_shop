@@ -14,7 +14,8 @@ class PanierController extends Controller
      */
     public function index()
     {
-        //
+        $paniers = Panier::orderByDesc('created_at')->limit(5)->get();;
+        return view('vente.cart', compact('paniers'));
     }
 
     /**

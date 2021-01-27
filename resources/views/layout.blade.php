@@ -197,7 +197,7 @@
 													<li><a href="#">Commande<i class="ti-angle-down"></i><span class="new">New</span></a>
 														<ul class="dropdown">
 															<li><a href="{{url('shop')}}">Grille de Commande</a></li>
-															<li><a href="{{url('cart')}}">Panier</a></li>
+															<li><a href="{{url('panier')}}">Panier</a></li>
 															<li><a href="{{url('caisse')}}">Paiement</a></li>
 														</ul>
 													</li>

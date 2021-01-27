@@ -15,6 +15,14 @@ class CreatePaniersTable extends Migration
     {
         Schema::create('paniers', function (Blueprint $table) {
             $table->id();
+            $table->string('designation');
+            $table->string('description_article');
+            $table->integer('quantite');
+            $table->integer('prix_unitaire');
+            $table->string('taille');
+            $table->string('couleur');
+            $table->integer('etat');
+            $table->unsignedInteger('users_id');
             $table->timestamps();
         });
     }

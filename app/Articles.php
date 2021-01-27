@@ -22,4 +22,9 @@ class Articles extends Model
     {
         return $this->hasMany('App\Couleur');
     }
+
+    public function panier()
+    {
+        return $this->hasMany('App\Panier');
+    }
 }
