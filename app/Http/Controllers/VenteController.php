@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Articles;
 use App\Categories;
+use App\Tailles;
+use App\Couleurs;
 use Illuminate\Http\Request;
 
 class VenteController extends Controller
@@ -26,7 +28,9 @@ class VenteController extends Controller
         $accessoires = Articles::where('categories_id', '=', 6)->get();
         $reduction = Articles::where('reduction', '>', 0)->get();
         $categories = Categories::all();
-        return view('welcome', compact('hommes', 'femmes', 'enfants', 'accessoires', 'articles', 'mixte_adultes', 'mixte_enfants', 'arrivages', 'recents'));
+        //$tailles = Tailles::all();
+        //$couleurs = Couleurs::all();
+        return view('welcome', compact('hommes', 'femmes', 'enfants', 'accessoires', 'articles', 'mixte_adultes', 'mixte_enfants', 'arrivages', 'recents', 'tailles', 'couleurs'));
     }
 
     /**

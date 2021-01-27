@@ -191,17 +191,16 @@
 									<li><a href="#">Nouvel arrivage <i class="fa fa-angle-right" aria-hidden="true"></i></a>
 										<ul class="sub-category">
 											@foreach($arrivages as $arrivage);
-												<li><a href="#">{{$arrivage->designation}}</a></li>
+												<li>
+													<a href="#">{{$arrivage->designation}} : dans la categorie {{$arrivage->categories->nom_categorie}}</a>
+												</li>
 											@endforeach
 										</ul>
 									</li>
 									<li class="main-mega"><a href="#">Commande recente <i class="fa fa-angle-right" aria-hidden="true"></i></a>
 										<ul class="mega-menu">
 											<li class="single-menu">
-												<a href="#" class="title-link">Commande pour Enfant</a>
-												<div class="image">
-													<img src="{{asset('images/bbn.jpg')}}" alt="#">
-												</div>
+													<p>Commande</p>
 											</li>
 										</ul>
 									</li>
