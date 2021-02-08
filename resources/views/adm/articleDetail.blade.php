@@ -18,18 +18,14 @@
 							<p class="small-title">Detail de l'article</p>
 							<h3 class="title">Designation</h3>
 							<p class="text">Taille disponible: 
-								<select name="taille" id="taille">
-									@foreach($tailles as $taille)
-                                    <option value="{{$taille->id}}">{{$taille->taille}}</option>
-									@endforeach
-                                </select>
+								@foreach($tailles as $taille)
+								<span>{{$taille->taille}} | </span>
+								@endforeach
 							</p>
-                            <p class="text">Couleur disponible: 
-								<select name="taille" id="taille">
-									@foreach($couleurs as $couleur)
-                                    <option value="{{$couleur->id}}">{{$couleur->taille}}</option>
-									@endforeach
-                                </select>
+                            <p class="text">Taille disponible: 
+								@foreach($couleurs as $couleur)
+								<span>{{$couleur->couleur}} | </span>
+								@endforeach
 							</p>
 							<h1 class="price">$PrixN <s>$PrixR</s></h1>
 						</div>

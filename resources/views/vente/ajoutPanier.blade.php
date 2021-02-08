@@ -45,7 +45,7 @@
                                             <div class="row">
                                                 <div class="col-lg-6 col-12">
                                                     <h5 class="title">Taille</h5>
-                                                    <select>
+                                                    <select name="taille" id="taille">
                                                         @foreach($tailles as $taille)
                                                             <option>{{$taille->taille}}</option>
                                                         @endforeach
@@ -53,7 +53,7 @@
                                                 </div>
                                                 <div class="col-lg-6 col-12">
                                                     <h5 class="title">Color</h5>
-                                                    <select>
+                                                    <select name="couleur" id="couleur">
                                                         @foreach($couleurs as $couleur)
                                                             <option>{{$couleur->couleur}}</option>
                                                         @endforeach
@@ -65,11 +65,11 @@
                                             <!-- Input Order -->
                                             <div class="input-group">
                                                 <div class="button minus">
-                                                    <button type="button" class="btn btn-primary btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+                                                    <button type="button" class="btn btn-primary btn-number" disabled="disabled" data-type="minus" data-field="quantite">
                                                         <i class="ti-minus"></i>
                                                     </button>
                                                 </div>
-                                                <input type="text" name="quantite" class="input-number"  data-min="1" data-max="1000">
+                                                <input type="text" name="quantite" class="input-number"  data-min="1" data-max="100" value="1">
                                                 <div class="button plus">
                                                     <button type="button" class="btn btn-primary btn-number" data-type="plus" data-field="quantite">
                                                         <i class="ti-plus"></i>

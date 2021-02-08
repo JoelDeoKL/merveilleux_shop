@@ -38,86 +38,18 @@
 				</thead>
 				<tbody>
 					@foreach($paniers as $panier)
-						{{$paniers}}
+						<tr>
+							<td class="image" data-title="No"><img src="{{asset('images/bbn.jpg')}}" alt="#"></td>
+							<td class="product-des" data-title="Description">
+								<p class="product-name"><a href="#">{{$panier->designation}}</a></p>
+								<p class="product-des">{{$panier->description_article}}</p>
+							</td>
+							<td class="price" data-title="Price"><span>${{$panier->prix_unitaire}} </span></td>
+							<td class="qty" data-title="Quantite"><span>{{$panier->quantite}}</span></td>
+							<td class="total-amount" data-title="Total"><span>${{$panier->prix_unitaire * $panier->quantite}}</span></td>
+							<td class="action" data-title="Remove"><a href="#"><i class="ti-trash remove-icon"></i></a></td>
+						</tr>
 					@endforeach
-					<tr>
-						<td class="image" data-title="No"><img src="{{asset('images/bbn.jpg')}}" alt="#"></td>
-						<td class="product-des" data-title="Description">
-							<p class="product-name"><a href="#">Polo Homme</a></p>
-							<p class="product-des">Marque de la boutique Merveilleux-Shop</p>
-						</td>
-						<td class="price" data-title="Price"><span>$15.00 </span></td>
-						<td class="qty" data-title="Qty"><!-- Input Order -->
-							<div class="input-group">
-								<div class="button minus">
-									<button type="button" class="btn btn-primary btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-										<i class="ti-minus"></i>
-									</button>
-								</div>
-								<input type="text" name="quant[1]" class="input-number"  data-min="1" data-max="100" value="1">
-								<div class="button plus">
-									<button type="button" class="btn btn-primary btn-number" data-type="plus" data-field="quant[1]">
-										<i class="ti-plus"></i>
-									</button>
-								</div>
-							</div>
-							<!--/ End Input Order -->
-						</td>
-						<td class="total-amount" data-title="Total"><span>$15.00</span></td>
-						<td class="action" data-title="Remove"><a href="#"><i class="ti-trash remove-icon"></i></a></td>
-					</tr>
-					<tr>
-						<td class="image" data-title="No"><img src="{{asset('images/1.png')}}" alt="#"></td>
-						<td class="product-des" data-title="Description">
-							<p class="product-name"><a href="#">Chemise Homme</a></p>
-							<p class="product-des">Chemise manche longue</p>
-						</td>
-						<td class="price" data-title="Price"><span>$20.00 </span></td>
-						<td class="qty" data-title="Qty"><!-- Input Order -->
-							<div class="input-group">
-								<div class="button minus">
-									<button type="button" class="btn btn-primary btn-number" disabled="disabled" data-type="minus" data-field="quant[2]">
-										<i class="ti-minus"></i>
-									</button>
-								</div>
-								<input type="text" name="quant[2]" class="input-number"  data-min="1" data-max="100" value="2">
-								<div class="button plus">
-									<button type="button" class="btn btn-primary btn-number" data-type="plus" data-field="quant[2]">
-										<i class="ti-plus"></i>
-									</button>
-								</div>
-							</div>
-							<!--/ End Input Order -->
-						</td>
-						<td class="total-amount" data-title="Total"><span>$20.88</span></td>
-						<td class="action" data-title="Remove"><a href="#"><i class="ti-trash remove-icon"></i></a></td>
-					</tr>
-					<tr>
-						<td class="image" data-title="No"><img src="{{asset('images/4.png')}}" alt="#"></td>
-						<td class="product-des" data-title="Description">
-							<p class="product-name"><a href="#">Chemise Homme</a></p>
-							<p class="product-des">Chemise manche courte</p>
-						</td>
-						<td class="price" data-title="Price"><span>$20.00 </span></td>
-						<td class="qty" data-title="Qty"><!-- Input Order -->
-							<div class="input-group">
-								<div class="button minus">
-									<button type="button" class="btn btn-primary btn-number" disabled="disabled" data-type="minus" data-field="quant[3]">
-										<i class="ti-minus"></i>
-									</button>
-								</div>
-								<input type="text" name="quant[3]" class="input-number"  data-min="1" data-max="100" value="3">
-								<div class="button plus">
-									<button type="button" class="btn btn-primary btn-number" data-type="plus" data-field="quant[3]">
-										<i class="ti-plus"></i>
-									</button>
-								</div>
-							</div>
-							<!--/ End Input Order -->
-						</td>
-						<td class="total-amount" data-title="Total"><span>$20.88</span></td>
-						<td class="action" data-title="Remove"><a href="#"><i class="ti-trash remove-icon"></i></a></td>
-					</tr>
 				</tbody>
 			</table>
 			<!--/ End Shopping Summery -->
@@ -131,11 +63,15 @@
 					<div class="col-lg-12 col-md-7 col-12">
 						<div class="right">
 							<ul>
-								<li>Polo Homme<span>$15.00</span></li>
-								<li>Chemise mache longue<span>$20.00</span></li>
-								<li>Chemise manche courte<span>$20.00</span></li>
-								<li>Reduction <span>$4.00</span></li>
-								<li class="last">MONTANT A PAYER<span>$51.00</span></li>
+								<?php $total = 0?>
+								@foreach($paniers as $panier)
+									<li>{{$panier->designation}}<span>${{$panier->prix_unitaire * $panier->quantite}}</span></li>
+									<?php
+										$total = $total + ($panier->prix_unitaire * $panier->quantite);
+									?>
+								@endforeach
+								<br>
+								<li class="last">MONTANT A PAYER<span>${{$total}}</span></li>
 							</ul>
 							<div class="button5">
 								<a href="{{url('caisse')}}" class="btn">COMMANDER</a>

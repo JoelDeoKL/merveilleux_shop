@@ -14,7 +14,7 @@ class PanierController extends Controller
      */
     public function index()
     {
-        $paniers = Panier::orderByDesc('created_at')->limit(5)->get();;
+        $paniers = Panier::orderByDesc('created_at')->get();;
         return view('vente.cart', compact('paniers'));
     }
 
@@ -36,7 +36,8 @@ class PanierController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $paniers = Panier::create($this->validateur());
+        return view('vente.cart', compact('paniers'));
     }
 
     /**
@@ -70,7 +71,7 @@ class PanierController extends Controller
      */
     public function update(Request $request, Panier $panier)
     {
-        //
+        $paniers = Panier::create($this->validateur());
     }
 
     /**
@@ -82,5 +83,19 @@ class PanierController extends Controller
     public function destroy(Panier $panier)
     {
         //
+    }
+
+    private function validateur()
+    {
+        return request()->validate([
+            'designation' => 'required|min:3',
+            'description_article' => 'required|min:3',
+            'quantite' => 'required|integer',
+            'prix_unitaire' => 'required|integer',
+            'taille' => 'required|min:1',
+            'couleur' => 'required|min:3',
+            'etat' => 'required|integer',
+            'users_id' => 'required|integer'
+        ]);
     }
 }
