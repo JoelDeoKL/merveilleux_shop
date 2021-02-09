@@ -15,13 +15,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'VenteController@index');
 Route::resource('achat', 'VenteController');
+Route::get('shop', 'VenteController@shop');
 
 Route::resource('panier', 'PanierController');
 
 Route::view('blog', 'vente/blog');
 Route::view('caisse', 'vente/checkout');
 Route::view('contact', 'vente/contact');
-Route::view('shop', 'vente/shop');
 
 Route::resource('adm', 'ArticleController');
 

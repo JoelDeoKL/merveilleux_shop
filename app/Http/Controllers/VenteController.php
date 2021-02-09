@@ -23,14 +23,23 @@ class VenteController extends Controller
         $hommes = Articles::where('categories_id', '=', 1)->get();
         $femmes = Articles::where('categories_id', '=', 2)->get();
         $enfants = Articles::where('categories_id', '=', 3)->get();
-        $mixte_enfants = Articles::where('categories_id', '=', 4)->get();
-        $mixte_adultes = Articles::where('categories_id', '=', 5)->get();
+        $mixte_enfants = Articles::where('categories_id', '=', 5)->get();
+        $mixte_adultes = Articles::where('categories_id', '=', 4)->get();
         $accessoires = Articles::where('categories_id', '=', 6)->get();
         $reduction = Articles::where('reduction', '>', 0)->get();
         $categories = Categories::all();
-        //$tailles = Taille::all();
-        //$couleurs = Couleur::all();
+        $tailles = Taille::all();
+        $couleurs = Couleur::all();
         return view('welcome', compact('hommes', 'femmes', 'enfants', 'accessoires', 'articles', 'mixte_adultes', 'mixte_enfants', 'arrivages', 'recents', 'tailles', 'couleurs'));
+    }
+
+    public function shop()
+    {
+        $articles = Articles::all();
+        $arrivages = Articles::orderByDesc('created_at')->limit(3)->get();
+        $categories = Categories::all();
+
+        return view('vente.shop', compact('articles', 'arrivages', 'categories'));
     }
 
     /**
