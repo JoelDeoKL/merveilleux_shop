@@ -17,6 +17,8 @@ Route::get('/', 'VenteController@index');
 Route::resource('achat', 'VenteController');
 Route::get('shop', 'VenteController@shop');
 
+Route::resource('commande', 'CommandeController');
+
 Route::resource('panier', 'PanierController');
 
 Route::view('blog', 'vente/blog');

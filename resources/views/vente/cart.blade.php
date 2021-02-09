@@ -74,7 +74,7 @@
 								<li class="last">MONTANT A PAYER<span>${{$total}}</span></li>
 							</ul>
 							<div class="button5">
-								<a href="{{url('caisse')}}" class="btn">COMMANDER</a>
+								<a href="{{url('commande')}}" class="btn">COMMANDER</a>
 								<a href="{{url('shop')}}" class="btn">CONTINUER LES ACHATS</a>
 							</div>
 						</div>
