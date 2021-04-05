@@ -25,7 +25,7 @@
                                 <td class="price" data-title="id"><span>{{++$i}} </span></td>
                                 <td class="image" data-title="No"><img src="{{asset('storage/' . $categorie->image)}}" width=200 class="img-thumnail" alt="article-imag"></td>
                                 <td class="product-des" data-title="Description">
-                                    <p class="product-name"><a href="#">{{$categorie->titre_categorie}}</a></p>
+                                    <p class="product-name"><a href="#">{{$categorie->nom_categorie}}</a></p>
                                     <p class="product-des">{{$categorie->description_categorie}}</p>
                                 </td>
                                 <td class="action" data-title="View"><a href="/adm/{{$article->id}}"><i class="ti-eye"></i></a></td>
