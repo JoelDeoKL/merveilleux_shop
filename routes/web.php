@@ -25,6 +25,8 @@ Route::view('blog', 'vente/blog');
 Route::view('caisse', 'vente/checkout');
 Route::view('contact', 'vente/contact');
 
+Route::resource('categories', 'CategorieController');
+
 Route::resource('adm', 'ArticleController');
 
 Route::resource('detail', 'DetailController');

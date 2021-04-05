@@ -37,7 +37,7 @@
             </div>
             <div class="col-12">
                 <br>
-                <a href="{{URL('adm/create')}}" class="btn btn-primary">Ajouter</a>
+                <a href="#" class="btn btn-primary">Ajouter</a>
             </div>
         </div>
     </div>
