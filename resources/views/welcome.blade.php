@@ -110,7 +110,8 @@
 											<div class="col-xl-4 col-lg-4 col-md-4 col-12">
 												<div class="single-product">
 													<div class="product-img">
-														<img class="hover-img" src="{{asset('storage/' . $homme->image)}}" alt="#">
+														{{$hommes}}
+														<img class="hover-img" src="{{asset('storage/' . $hommes)}}" alt="#">
 														<img class="hover-img" src="{{asset('images/1.png')}}" alt="#">
 														<div class="button-head">
 															<div class="product-action">
