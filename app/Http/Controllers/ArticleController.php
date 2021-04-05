@@ -15,12 +15,12 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function xindex()
+    public function index()
     {
         $articles = Articles::all();
         return view('adm.articles', compact('articles'));
     }
-    public function index()
+    public function xindex()
     {
         return view('adm.categories');
     }
